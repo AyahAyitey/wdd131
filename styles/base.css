@@ -3,9 +3,6 @@
    base.css – Ayah Ayitey
    ========================================================= */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
 /* --- Custom Properties --- */
 :root {
   --color-header-bg:  #2c4a6e;   /* dark navy – matches screenshot header */
@@ -293,4 +290,3 @@ footer p {
     padding: 0.5rem 0.9rem;
   }
 }
-
