@@ -1,1 +1,296 @@
+/* =========================================================
+   WDD 131 – Dynamic Web Fundamentals
+   base.css – Ayah Ayitey
+   ========================================================= */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- Custom Properties --- */
+:root {
+  --color-header-bg:  #2c4a6e;   /* dark navy – matches screenshot header */
+  --color-nav-bg:     #3a3a3a;   /* dark charcoal nav bar */
+  --color-card-head:  #2c4a6e;   /* card title bar */
+  --color-accent:     #f5c518;   /* gold – footer last-modified text */
+  --color-bg:         #f0f2f5;
+  --color-surface:    #ffffff;
+  --color-text:       #1a1a2e;
+  --color-text-light: #ffffff;
+  --color-link:       #1a5276;
+  --font-heading:     'Merriweather', Georgia, serif;
+  --font-body:        'Open Sans', Arial, sans-serif;
+  --max-width:        1000px;
+  --radius:           6px;
+  --shadow:           0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* =========================================================
+   HEADER  – two-row: title bar + nav bar
+   ========================================================= */
+header {
+  background-color: var(--color-header-bg);
+  text-align: center;
+}
+
+/* Row 1 – course title */
+#course-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  padding: 0.9rem 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* Row 2 – nav bar (darker strip, just like the screenshot) */
+nav {
+  background-color: var(--color-nav-bg);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover: subtle bg tint + bottom border accent — no position shift */
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+main {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  flex: 1;
+}
+
+main > h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+/* ── Two-column card grid ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;   /* About Me wider, Resources narrower */
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Coloured header bar inside each card */
+.card-header {
+  background-color: var(--color-card-head);
+  padding: 0.65rem 1.25rem;
+  text-align: center;
+}
+
+.card-header h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* ── Bio row: paragraph floated left of portrait ── */
+.bio-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.bio-row p {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.portrait img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  width: 150px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+/* ── Hometown section ── */
+.hometown h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.hometown hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.hometown-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.flag {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.flag img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.flag figcaption {
+  font-size: 0.78rem;
+  color: #555;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+.hometown-row > p {
+  font-size: 0.93rem;
+  flex: 1;
+}
+
+/* ── Resources card ── */
+.resource-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.resource-list li a {
+  font-size: 0.93rem;
+  color: var(--color-link);
+}
+
+.resource-list li a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  background-color: var(--color-header-bg);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.1rem 1rem;
+  font-size: 0.88rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+/* Last Modified line gets the gold accent colour */
+#lastModified {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 720px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-row {
+    flex-direction: column;
+  }
+
+  .portrait img {
+    width: 120px;
+    height: 144px;
+  }
+
+  .hometown-row {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 0;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
 
