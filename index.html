@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Ayah Ayitey</title>
+    <meta
+      name="description"
+      content="WDD 131 – Dynamic Web Fundamentals. Ayah Ayitey. A course landing page covering HTML, CSS, JavaScript, and modern web design principles for a BYU-Idaho Worldwide student from Accra, Ghana."
+    />
+    <meta name="author" content="Ayah Ayitey" />
+
+    <!-- Google Fonts preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <!-- JavaScript – deferred so DOM is ready before execution -->
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header>
+      <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+
+      <nav aria-label="Primary navigation">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
+        <a
+          href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Scripture</a
+        >
+        <a href="project/" aria-label="Final Project folder (placeholder)">Final Project</a>
+      </nav>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+      <h1>Ayah Ayitey</h1>
+
+      <div class="cards-grid">
+
+        <!-- ── Card 1: About Me ── -->
+        <section class="card" id="about-card">
+          <div class="card-header">
+            <h2>About Me</h2>
+          </div>
+          <div class="card-body">
+
+            <!-- Bio row: text + portrait -->
+            <div class="bio-row">
+              <p>
+                My name is Ayah Ayitey and I go by Ayah. I was born in Ghana and currently live
+                in Accra. I am a student in Software Development at BYU-Idaho Worldwide (online).
+                I am passionate about technology and love building creative solutions through code.
+                In my free time, I enjoy exploring new places and learning new skills that
+                challenge my thinking.
+              </p>
+              <figure class="portrait">
+                <img
+                  src="images/aa.jpg"
+                  alt="Portrait of Ayah Ayitey"
+                  width="150"
+                  height="180"
+                  loading="eager"
+                />
+              </figure>
+            </div>
+
+            <!-- Hometown section -->
+            <div class="hometown">
+              <h3>Accra, Ghana</h3>
+              <hr />
+              <div class="hometown-row">
+                <figure class="flag">
+                  <img
+                    src="images/ghana.jpg"
+                    alt="Flag of Ghana"
+                    width="160"
+                    height="110"
+                    loading="lazy"
+                  />
+                  <figcaption>Official Flag of Ghana</figcaption>
+                </figure>
+                <p>
+                  Ghana is a vibrant West African country known for its rich history, diverse
+                  cultures, and warm hospitality. Accra, the capital city, is a bustling hub of
+                  commerce, education, and innovation. Ghana is famous for its cocoa production,
+                  colorful kente cloth, and historic slave castles along the coast. The country
+                  is also home to a growing tech scene that continues to inspire the next
+                  generation of developers.
+                </p>
+              </div>
+            </div>
+
+          </div><!-- /.card-body -->
+        </section>
+
+        <!-- ── Card 2: Web Dev Resources ── -->
+        <section class="card" id="resources-card">
+          <div class="card-header">
+            <h2>Web Dev Resources</h2>
+          </div>
+          <div class="card-body">
+            <ul class="resource-list">
+              <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+              <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+              <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+              <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+              <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+              <li><a href="https://picsum.photos/" target="_blank" rel="noopener noreferrer">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+          </div>
+        </section>
+
+      </div><!-- /.cards-grid -->
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <p>
+        &copy;<span id="currentyear"></span> 🌸 Ayah Ayitey 🌸 Ghana
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
