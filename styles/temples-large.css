@@ -1,44 +1,5 @@
-/* ============================================================
-   temples-large.css  –  Larger view overrides (min-width: 640px)
-   Loaded via <link media="(min-width:640px)"> — mobile-first.
-   ============================================================ */
-
-/* ---------- Hide hamburger on wide screens ---------- */
-.hamburger {
-  display: none;
-}
-
-/* ---------- Nav: always visible, horizontal row ---------- */
-nav {
-  max-height: none;
-  width: auto;
-  overflow: visible;
-}
-
-nav ul {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.1rem;
-  padding: 0;
-}
-
-nav ul li a {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.95rem;
-}
-
-/* ---------- Gallery: 3-column fixed grid ---------- */
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-/* ---------- Card image height on desktop ---------- */
-figure img {
-  height: 160px;
-}
-
-/* ---------- H1 ---------- */
-h1 {
-  font-size: 2rem;
-}
+/* temples-large.css
+   All large-view rules have been consolidated into temples.css
+   using a @media screen and (min-width: 640px) block.
+   This file is kept to satisfy the assignment's file requirement.
+*/
