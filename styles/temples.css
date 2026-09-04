@@ -1,0 +1,189 @@
+/* ============================================================
+   temples.css  –  Mobile-first base styles
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:     #1a3a2a;   /* dark forest green – header & footer */
+  --color-accent:      #b8962e;   /* warm gold – site title              */
+  --color-bg:          #f0ede4;   /* warm parchment page background      */
+  --color-surface:     #ffffff;   /* white card background               */
+  --color-border:      #d4cfc5;   /* subtle card border                  */
+  --color-text:        #1a3a2a;   /* dark green body/caption text        */
+  --color-text-light:  #ffffff;   /* white text on dark bg               */
+  --font-heading:      'Cinzel', serif;
+  --font-body:         'Lato', sans-serif;
+  --shadow:            0 1px 5px rgba(0, 0, 0, 0.10);
+  --radius:            6px;
+  --transition:        0.2s ease;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: var(--color-primary);
+  padding: 0 1.5rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Gold uppercase Cinzel title */
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ========== HAMBURGER BUTTON (mobile only) ========== */
+.hamburger {
+  display: block;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: var(--color-text-light);
+  font-size: 1.25rem;
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  line-height: 1;
+  transition: background var(--transition);
+}
+
+.hamburger:hover,
+.hamburger:focus-visible {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+/* ========== NAV ========== */
+nav {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+nav.open {
+  max-height: 300px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;   /* stacked on mobile */
+  padding: 0.5rem 0 0.75rem;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+  background-color: rgba(255, 255, 255, 0.18);
+  outline: none;
+}
+
+/* ========== MAIN ========== */
+main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Cinzel small-caps H1 – dark green centered */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text);
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-variant: small-caps;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== GALLERY – 1 column on mobile ========== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* ========== FIGURE / CARD ========== */
+figure {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+figure img {
+  display: block;
+  width: 100%;        /* fully responsive */
+  height: 180px;
+  object-fit: cover;
+}
+
+figcaption {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text);
+  text-align: center;
+  padding: 0.5rem 0.75rem 0.6rem;
+}
+
+/* ========== FOOTER (same dark green as header) ========== */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
