@@ -11,7 +11,7 @@
 
 :root {
   --color-primary:    #1a3a2a;   /* dark forest green – header & footer */
-  --color-accent:     #b8962e;   /* warm gold – site title              */
+  --color-accent:     #e8b84b;   /* warm gold – site title (AA contrast ≥4.5:1 on dark green) */
   --color-bg:         #f0ede4;   /* warm parchment page background      */
   --color-surface:    #ffffff;   /* white card background               */
   --color-border:     #d4cfc5;   /* subtle card border                  */
