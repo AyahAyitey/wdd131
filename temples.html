@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A responsive temple album showcasing beautiful LDS temples around the world." />
+  <title>Temple Album</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Mobile-first base styles -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <!-- Larger view overrides -->
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 640px)" />
+
+  <!-- Deferred JavaScript -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="header-inner">
+      <p class="site-title">Temple Album</p>
+      <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        &#9776;
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+    <h1>Temples of the Church</h1>
+
+    <div class="gallery">
+
+      <figure>
+        <img
+          src="images/1.jpg"
+          alt="St. George Utah Temple surrounded by red rock scenery and mountains"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>St. George Utah Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/2.jpg"
+          alt="Salt Lake Utah Temple with fountains in the foreground"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Salt Lake Utah Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/3.jpg"
+          alt="Laie Hawaii Temple aerial view with lush gardens and reflecting pool"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/4.jpg"
+          alt="Manti Utah Temple on a green hill against a blue sky"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Manti Utah Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/5.jpeg"
+          alt="Nauvoo Illinois Temple at sunset with golden light on the walkway"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Nauvoo Illinois Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/6.jpg"
+          alt="Washington D.C. Temple with six spires along a tree-lined walkway"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Washington D.C. Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/7.jpg"
+          alt="Boston Massachusetts Temple surrounded by lush green trees and curved driveway"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Boston Massachusetts Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/8.jpg"
+          alt="Bountiful Utah Temple against a colorful purple and pink sunset sky"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Bountiful Utah Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/9.JPG"
+          alt="Toronto Ontario Temple aerial view at golden hour with suburban surroundings"
+          loading="lazy"
+          width="400"
+          height="250"
+        />
+        <figcaption>Toronto Ontario Temple</figcaption>
+      </figure>
+
+    </div><!-- /.gallery -->
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>&copy;<span id="current-year"></span> &#x1F338; Rubia Magdelena Francesco &#x1F338; Madagascar</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
