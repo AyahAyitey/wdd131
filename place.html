@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Discover Japan – land of ancient temples, cherry blossoms, and vibrant modern culture." />
+  <meta name="author" content="Your Name" />
   <title>Japan – Land of the Rising Sun</title>
   <link rel="stylesheet" href="styles/place.css" />
   <script src="scripts/place.js" defer></script>
@@ -80,22 +81,23 @@
     <section class="weather">
       <h2 class="weather-heading">Weather</h2>
       <!-- Mobile: SVG icon; Desktop: pseudo-element emoticon via CSS -->
-      <div class="weather-icon-mobile" aria-hidden="true">
-        <!-- Partly cloudy SVG icon (inline for full control / no extra HTTP request) -->
+      <div class="weather-icon-mobile">
+        <!-- Partly cloudy SVG icon -->
         <svg xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 24 24"
-             width="64" height="64"
-             aria-label="Partly cloudy weather icon"
+             width="64"
+             height="64"
              role="img"
-             fill="currentColor">
-          <title>Partly Cloudy</title>
-          <!-- Sun rays -->
+             aria-labelledby="svgWeatherTitle">
+          <title id="svgWeatherTitle">Partly Cloudy</title>
+          <!-- Sun circle -->
           <circle cx="12" cy="7" r="3" fill="#f5a623"/>
-          <line x1="12" y1="2" x2="12" y2="4"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="12" y1="10" x2="12" y2="12" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="7"  y1="7" x2="5"  y2="7"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="17" y1="7" x2="19" y2="7"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="8.5" y1="3.5" x2="7.1" y2="2.1" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Sun rays -->
+          <line x1="12" y1="2" x2="12" y2="4"     stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="12" y1="10" x2="12" y2="12"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="5"  y1="7"  x2="7"  y2="7"    stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="17" y1="7"  x2="19" y2="7"    stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="7.1" y1="2.1" x2="8.5" y2="3.5" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="15.5" y1="3.5" x2="16.9" y2="2.1" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
           <!-- Cloud -->
           <path d="M6 17a4 4 0 0 1 0-8 4.5 4.5 0 0 1 8.9-.5A3.5 3.5 0 1 1 17.5 17H6Z"
