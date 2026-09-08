@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Japan – land of ancient temples, cherry blossoms, and vibrant modern culture." />
+  <title>Japan – Land of the Rising Sun</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Japan</h1>
+    <p class="tagline">Land of the Rising Sun</p>
+  </header>
+
+  <!-- ===== HERO IMAGE (srcset – WebP, two breakpoints) ===== -->
+  <section class="hero">
+    <picture>
+      <!-- Wide viewport ≥ 800 px -->
+      <source
+        srcset="images/japan-hero-wide.webp"
+        media="(min-width: 800px)" />
+      <!-- Default / mobile -->
+      <img
+        src="images/japan-hero-mobile.webp"
+        srcset="images/japan-hero-mobile.webp 480w, images/japan-hero-wide.webp 1200w"
+        sizes="(min-width: 800px) 1200px, 480px"
+        alt="Mount Fuji reflected in Kawaguchiko Lake at sunrise, Japan"
+        width="1200"
+        height="600"
+        loading="eager" />
+    </picture>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- About -->
+    <section class="about">
+      <h2>About Japan</h2>
+      <p>
+        Japan is an island nation in East Asia situated in the northwest Pacific Ocean. It comprises four
+        main islands – Honshu, Hokkaido, Kyushu, and Shikoku – and more than 6,800 smaller islands.
+        With a population of approximately 125 million, Japan blends ancient traditions with cutting-edge
+        modernity.
+      </p>
+      <p>
+        From the neon-lit streets of Tokyo to the serene bamboo groves of Arashiyama, Japan offers an
+        extraordinary diversity of experiences for every traveler.
+      </p>
+    </section>
+
+    <!-- Gallery / Highlights -->
+    <section class="highlights">
+      <h2>Highlights</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-icon" aria-hidden="true">🏯</span>
+          <strong>Osaka Castle</strong> – A symbol of Japan's feudal past and one of its most iconic landmarks.
+        </li>
+        <li>
+          <span class="highlight-icon" aria-hidden="true">🌸</span>
+          <strong>Cherry Blossoms (Sakura)</strong> – Every spring Japan bursts into breathtaking pink and white blooms.
+        </li>
+        <li>
+          <span class="highlight-icon" aria-hidden="true">🍣</span>
+          <strong>Japanese Cuisine</strong> – From sushi and ramen to wagyu beef and matcha everything.
+        </li>
+        <li>
+          <span class="highlight-icon" aria-hidden="true">🗻</span>
+          <strong>Mount Fuji</strong> – Japan's highest peak and a UNESCO World Heritage Site.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+      <h2 class="weather-heading">Weather</h2>
+      <!-- Mobile: SVG icon; Desktop: pseudo-element emoticon via CSS -->
+      <div class="weather-icon-mobile" aria-hidden="true">
+        <!-- Partly cloudy SVG icon (inline for full control / no extra HTTP request) -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             width="64" height="64"
+             aria-label="Partly cloudy weather icon"
+             role="img"
+             fill="currentColor">
+          <title>Partly Cloudy</title>
+          <!-- Sun rays -->
+          <circle cx="12" cy="7" r="3" fill="#f5a623"/>
+          <line x1="12" y1="2" x2="12" y2="4"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="12" y1="10" x2="12" y2="12" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="7"  y1="7" x2="5"  y2="7"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="17" y1="7" x2="19" y2="7"   stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="8.5" y1="3.5" x2="7.1" y2="2.1" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="15.5" y1="3.5" x2="16.9" y2="2.1" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Cloud -->
+          <path d="M6 17a4 4 0 0 1 0-8 4.5 4.5 0 0 1 8.9-.5A3.5 3.5 0 1 1 17.5 17H6Z"
+                fill="#b0c4de" stroke="#7a9abf" stroke-width="0.5"/>
+        </svg>
+      </div>
+
+      <div class="weather-details">
+        <p><strong>Location:</strong> Tokyo, Japan</p>
+        <p><strong>Temperature:</strong> <span id="temperature">5</span> °C</p>
+        <p><strong>Wind Speed:</strong> <span id="windspeed">20</span> km/h</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p class="wind-chill-row">
+          <strong>Wind Chill:</strong>
+          <span id="wind-chill">--</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Japan Travel Guide &copy; <span id="currentYear"></span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
