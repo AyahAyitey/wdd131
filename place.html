@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Discover Japan – land of ancient temples, cherry blossoms, and vibrant modern culture." />
-  <meta name="author" content="Your Name" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Japan – land of ancient temples, cherry blossoms, and vibrant modern culture.">
+  <meta name="author" content="Your Name">
   <title>Japan – Land of the Rising Sun</title>
-  <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -18,12 +18,13 @@
   </header>
 
   <!-- ===== HERO IMAGE (srcset – WebP, two breakpoints) ===== -->
-  <section class="hero">
+  <div class="hero">
     <picture>
       <!-- Wide viewport ≥ 800 px -->
       <source
-        srcset="images/japan-hero-wide.webp"
-        media="(min-width: 800px)" />
+        srcset="images/japan-hero-wide.webp 1200w"
+        sizes="(min-width: 800px) 1200px"
+        media="(min-width: 800px)">
       <!-- Default / mobile -->
       <img
         src="images/japan-hero-mobile.webp"
@@ -32,9 +33,9 @@
         alt="Mount Fuji reflected in Kawaguchiko Lake at sunrise, Japan"
         width="1200"
         height="600"
-        loading="eager" />
+        loading="eager">
     </picture>
-  </section>
+  </div>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
