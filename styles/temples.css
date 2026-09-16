@@ -1,233 +1,227 @@
-/* ============================================================
-   temples.css  –  Mobile-first styles + large view @media query
-   ============================================================ */
+/* =============================================
+   temples.css — Mobile-first styles
+   ============================================= */
 
-/* ---------- Reset / Base ---------- */
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- CSS Custom Properties --- */
+:root {
+  --color-primary: #1a3a5c;
+  --color-secondary: #b8922a;   /* darkened from #c9a84c for AA contrast on white */
+  --color-secondary-light: #c9a84c; /* used on dark backgrounds only */
+  --color-bg: #f5f0e8;
+  --color-card-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-footer-bg: #1a3a5c;
+  --color-footer-text: #f5f0e8;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Reset & Base --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-  --color-primary:    #1a3a2a;   /* dark forest green – header & footer */
-  --color-accent:     #e8b84b;   /* warm gold – site title (AA contrast ≥4.5:1 on dark green) */
-  --color-bg:         #f0ede4;   /* warm parchment page background      */
-  --color-surface:    #ffffff;   /* white card background               */
-  --color-border:     #d4cfc5;   /* subtle card border                  */
-  --color-text:       #1a3a2a;   /* dark green body / caption text      */
-  --color-text-light: #ffffff;   /* white text on dark bg               */
-  --font-heading:     'Cinzel', serif;
-  --font-body:        'Lato', sans-serif;
-  --shadow:           0 1px 5px rgba(0, 0, 0, 0.10);
-  --radius:           6px;
-  --transition:       0.2s ease;
-}
-
-html {
-  font-size: 16px;
-}
-
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ========== HEADER ========== */
+/* --- Header --- */
 header {
   background-color: var(--color-primary);
-  padding: 0 1.5rem;
-}
-
-.header-inner {
+  color: #fff;
+  padding: 1rem 1.25rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 56px;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
 }
 
 .site-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--color-accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* ========== HAMBURGER BUTTON (mobile only) ========== */
-.hamburger {
-  display: block;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  color: var(--color-text-light);
-  font-size: 1.25rem;
-  padding: 0.2rem 0.55rem;
-  cursor: pointer;
-  border-radius: var(--radius);
-  line-height: 1;
-  transition: background var(--transition);
-}
-
-.hamburger:hover,
-.hamburger:focus-visible {
-  background-color: rgba(255, 255, 255, 0.15);
-  outline: none;
-}
-
-/* ========== NAV (mobile: collapsed, toggled by JS) ========== */
-nav {
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-
-nav.open {
-  max-height: 300px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 0 0.75rem;
-}
-
-nav ul li a {
-  display: block;
-  color: var(--color-text-light);
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 400;
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--radius);
-  transition: background var(--transition);
-}
-
-nav ul li a:hover,
-nav ul li a:focus-visible {
-  background-color: rgba(255, 255, 255, 0.18);
-  outline: none;
-}
-
-/* ========== MAIN ========== */
-main {
-  flex: 1;
-  max-width: 960px;
-  width: 100%;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h1 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--color-text);
-  text-align: center;
-  letter-spacing: 0.06em;
-  font-variant: small-caps;
-  margin-bottom: 1.5rem;
-}
-
-/* ========== GALLERY – 1 column on mobile ========== */
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-}
-
-/* ========== FIGURE / CARD ========== */
-figure {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-figure img {
-  display: block;
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-figcaption {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--color-text);
-  text-align: center;
-  padding: 0.5rem 0.75rem 0.6rem;
-}
-
-/* ========== FOOTER ========== */
-footer {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  text-align: center;
-  padding: 0.9rem 1rem;
-  font-size: 0.85rem;
-  line-height: 1.8;
-  margin-top: auto;
-}
-
-footer p {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-light);
   margin: 0;
 }
 
-/* ============================================================
-   LARGE VIEW  –  min-width: 640px
-   ============================================================ */
-@media screen and (min-width: 640px) {
+/* --- Navigation --- */
+#main-nav {
+  position: relative;
+}
 
-  /* Hide hamburger on wide screens */
-  .hamburger {
-    display: none;
-  }
+#hamburger-btn {
+  background: none;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+  display: block;
+}
 
-  /* Nav: always visible, horizontal row */
-  nav {
-    max-height: none;
-    width: auto;
-    overflow: visible;
-  }
+#hamburger-btn:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
 
-  nav ul {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.1rem;
-    padding: 0;
-  }
+/* Nav list hidden by default on mobile */
+#nav-list {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+  background-color: var(--color-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-  nav ul li a {
-    padding: 0.4rem 0.85rem;
-  }
+#nav-list.open {
+  display: flex;
+}
 
-  /* Gallery: 3-column grid */
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
+#nav-list li a {
+  display: block;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-  /* Card image height */
-  figure img {
-    height: 160px;
-  }
+#nav-list li a:hover,
+#nav-list li a:focus-visible {
+  background-color: rgba(201, 168, 76, 0.2);
+  color: var(--color-secondary-light);
+}
 
-  /* Larger H1 */
-  h1 {
-    font-size: 2rem;
-  }
+#nav-list li a.active {
+  color: var(--color-secondary-light);
+  font-weight: 700;
+  border-left: 3px solid var(--color-secondary-light);
+}
 
+/* --- Main --- */
+main {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#gallery-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 0.5rem;
+}
+
+/* --- Temple Gallery Grid (mobile: 1 column) --- */
+#temple-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* --- Temple Card --- */
+.temple-card {
+  background-color: var(--color-card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temple-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.temple-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.temple-card figcaption {
+  padding: 0.85rem 1rem;
+}
+
+.temple-card figcaption h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.temple-card figcaption p {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.temple-card figcaption p span {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* --- No results message --- */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+/* --- Skip to main content (accessibility) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
 }

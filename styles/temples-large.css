@@ -1,5 +1,72 @@
-/* temples-large.css
-   All large-view rules have been consolidated into temples.css
-   using a @media screen and (min-width: 640px) block.
-   This file is kept to satisfy the assignment's file requirement.
-*/
+/* =============================================
+   temples-large.css — Styles for viewports >= 640px
+   Applied via media query in <link> tag
+   ============================================= */
+
+/* --- Header layout in larger view --- */
+header {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2rem;
+}
+
+/* --- Hide hamburger button on larger screens --- */
+#hamburger-btn {
+  display: none;
+}
+
+/* --- Nav list always visible and horizontal --- */
+#nav-list {
+  display: flex !important;
+  flex-direction: row;
+  gap: 0.25rem;
+  margin-top: 0;
+  border-top: none;
+  background-color: transparent;
+}
+
+#nav-list li a {
+  border-bottom: none;
+  border-left: none !important;
+  padding: 0.45rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#nav-list li a:hover,
+#nav-list li a:focus-visible {
+  background-color: rgba(201, 168, 76, 0.25);
+}
+
+#nav-list li a.active {
+  background-color: var(--color-secondary-light);
+  color: var(--color-primary);
+  border-left: none;
+}
+
+/* --- Gallery Grid: 2 columns at 640px --- */
+#temple-gallery {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- Gallery Grid: 3 columns at 900px --- */
+@media (min-width: 900px) {
+  #temple-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Gallery Grid: 4 columns at 1200px --- */
+@media (min-width: 1200px) {
+  #temple-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Taller card images on larger screens --- */
+.temple-card img {
+  height: 220px;
+}
