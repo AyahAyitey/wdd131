@@ -66,7 +66,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-27712-main.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/Salt_Lake_Temple%2C_Utah_-_Sept_2004.jpg"
   },
   {
     templeName: "Rome Italy",
@@ -74,7 +74,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 41010,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-37172-main.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/8/8b/RomeTempleatSunset.jpg"
   },
   {
     templeName: "Accra Ghana",
@@ -82,7 +82,7 @@ const temples = [
     dedicated: "2004, January, 11",
     area: 17400,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-12892-main.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/2/28/Ghana_Mission_247.jpg"
   }
 ];
 
