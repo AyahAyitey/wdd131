@@ -1,5 +1,5 @@
 /* =============================================
-   temples.css — Mobile-first base styles
+   temples.css — Mobile-first, fully consolidated
    Google Fonts loaded via <link> in HTML
    ============================================= */
 
@@ -10,16 +10,24 @@
   --color-secondary-light: #c9a84c;
   --color-bg: #f5f0e8;
   --color-card-bg: #ffffff;
+  --color-white: #ffffff;
   --color-text: #1a1a1a;
+  --color-text-muted: #444444;
   --color-footer-bg: #1a3a5c;
   --color-footer-text: #f5f0e8;
+  --color-nav-hover-bg: rgba(201, 168, 76, 0.2);
+  --color-nav-border: rgba(255, 255, 255, 0.15);
+  --color-nav-divider: rgba(255, 255, 255, 0.1);
   --font-heading: 'Cinzel', serif;
   --font-body: 'Lato', sans-serif;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 /* --- Reset & Base --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,8 +47,8 @@ body {
   position: absolute;
   top: -100%;
   left: 0;
-  background: var(--color-primary);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 0.5rem 1rem;
   z-index: 9999;
   font-size: 0.9rem;
@@ -55,7 +63,7 @@ body {
 /* --- Header --- */
 header {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
   padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -66,6 +74,7 @@ header {
   box-shadow: var(--shadow);
 }
 
+/* --- Site Title --- */
 .site-title {
   font-family: var(--font-heading);
   font-size: 1.4rem;
@@ -74,7 +83,7 @@ header {
   margin: 0;
 }
 
-/* --- Navigation --- */
+/* --- Hamburger Button --- */
 #hamburger-btn {
   background: none;
   border: 2px solid var(--color-secondary-light);
@@ -92,6 +101,7 @@ header {
   outline-offset: 2px;
 }
 
+/* --- Nav List (mobile: hidden by default) --- */
 #nav-list {
   list-style: none;
   display: none;
@@ -99,28 +109,29 @@ header {
   gap: 0;
   margin-top: 0.5rem;
   background-color: var(--color-primary);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid var(--color-nav-border);
 }
 
 #nav-list.open {
   display: flex;
 }
 
+/* --- Nav Links --- */
 #nav-list li a {
   display: block;
   padding: 0.65rem 1rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-white);
   font-family: var(--font-body);
   font-weight: 400;
   letter-spacing: 0.04em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-nav-divider);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #nav-list li a:hover,
 #nav-list li a:focus-visible {
-  background-color: rgba(201, 168, 76, 0.2);
+  background-color: var(--color-nav-hover-bg);
   color: var(--color-secondary-light);
 }
 
@@ -150,7 +161,7 @@ main {
   padding-bottom: 0.5rem;
 }
 
-/* --- Temple Gallery Grid — mobile: 1 column --- */
+/* --- Temple Gallery Grid (mobile: 1 column) --- */
 #temple-gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -168,7 +179,7 @@ main {
 
 .temple-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-hover);
 }
 
 .temple-card img {
@@ -191,7 +202,7 @@ main {
 
 .temple-card figcaption p {
   font-size: 0.82rem;
-  color: #444;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
@@ -200,7 +211,7 @@ main {
   color: var(--color-primary);
 }
 
-/* --- No results message --- */
+/* --- No Results Message --- */
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
@@ -218,4 +229,65 @@ footer {
   padding: 1rem;
   font-size: 0.85rem;
   line-height: 1.8;
+}
+
+/* =============================================
+   RESPONSIVE OVERRIDES — min-width: 640px
+   ============================================= */
+@media (min-width: 640px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 2rem;
+  }
+
+  #hamburger-btn {
+    display: none;
+  }
+
+  #nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-top: 0;
+    border-top: none;
+    background-color: transparent;
+  }
+
+  #nav-list li a {
+    border-bottom: none;
+    border-left: none;
+    padding: 0.45rem 0.85rem;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  #nav-list li a.active {
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary);
+    border-left: none;
+  }
+
+  #temple-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .temple-card img {
+    height: 220px;
+  }
+}
+
+@media (min-width: 900px) {
+  #temple-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #temple-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
