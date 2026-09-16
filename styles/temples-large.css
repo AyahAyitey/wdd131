@@ -1,9 +1,10 @@
 /* =============================================
-   temples-large.css — Styles for viewports >= 640px
-   Applied via media query in <link> tag
+   temples-large.css — Responsive overrides (min-width: 640px)
+   Loaded conditionally via media attribute in HTML.
+   Contains ONLY breakpoint-specific overrides.
    ============================================= */
 
-/* --- Header layout in larger view --- */
+/* --- Header: switch to horizontal row layout --- */
 header {
   flex-direction: row;
   align-items: center;
@@ -11,12 +12,12 @@ header {
   padding: 0.9rem 2rem;
 }
 
-/* --- Hide hamburger button on larger screens --- */
+/* --- Hide hamburger on larger screens --- */
 #hamburger-btn {
   display: none;
 }
 
-/* --- Nav list always visible and horizontal --- */
+/* --- Nav list: always visible, horizontal --- */
 #nav-list {
   display: flex !important;
   flex-direction: row;
@@ -26,6 +27,7 @@ header {
   background-color: transparent;
 }
 
+/* --- Nav links: adjust padding and remove mobile border --- */
 #nav-list li a {
   border-bottom: none;
   border-left: none !important;
@@ -36,37 +38,32 @@ header {
   text-transform: uppercase;
 }
 
-#nav-list li a:hover,
-#nav-list li a:focus-visible {
-  background-color: rgba(201, 168, 76, 0.25);
-}
-
+/* --- Active state on larger screens: filled background --- */
 #nav-list li a.active {
   background-color: var(--color-secondary-light);
   color: var(--color-primary);
-  border-left: none;
 }
 
-/* --- Gallery Grid: 2 columns at 640px --- */
+/* --- Gallery: 2 columns at 640px --- */
 #temple-gallery {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* --- Gallery Grid: 3 columns at 900px --- */
+/* --- Gallery: 3 columns at 900px --- */
 @media (min-width: 900px) {
   #temple-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* --- Gallery Grid: 4 columns at 1200px --- */
+/* --- Gallery: 4 columns at 1200px --- */
 @media (min-width: 1200px) {
   #temple-gallery {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* --- Taller card images on larger screens --- */
+/* --- Slightly taller images on larger screens --- */
 .temple-card img {
   height: 220px;
 }

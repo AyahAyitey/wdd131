@@ -1,15 +1,13 @@
 /* =============================================
-   temples.css — Mobile-first styles
+   temples.css — Mobile-first base styles
+   Google Fonts loaded via <link> in HTML
    ============================================= */
-
-/* --- Google Font Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap');
 
 /* --- CSS Custom Properties --- */
 :root {
   --color-primary: #1a3a5c;
-  --color-secondary: #b8922a;   /* darkened from #c9a84c for AA contrast on white */
-  --color-secondary-light: #c9a84c; /* used on dark backgrounds only */
+  --color-secondary: #b8922a;
+  --color-secondary-light: #c9a84c;
   --color-bg: #f5f0e8;
   --color-card-bg: #ffffff;
   --color-text: #1a1a1a;
@@ -36,6 +34,24 @@ body {
   flex-direction: column;
 }
 
+/* --- Skip Link (accessibility) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* --- Header --- */
 header {
   background-color: var(--color-primary);
@@ -59,14 +75,10 @@ header {
 }
 
 /* --- Navigation --- */
-#main-nav {
-  position: relative;
-}
-
 #hamburger-btn {
   background: none;
-  border: 2px solid var(--color-secondary);
-  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary-light);
+  color: var(--color-secondary-light);
   font-size: 1.5rem;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
@@ -76,11 +88,10 @@ header {
 }
 
 #hamburger-btn:focus-visible {
-  outline: 3px solid var(--color-secondary);
+  outline: 3px solid var(--color-secondary-light);
   outline-offset: 2px;
 }
 
-/* Nav list hidden by default on mobile */
 #nav-list {
   list-style: none;
   display: none;
@@ -128,6 +139,7 @@ main {
   margin: 0 auto;
 }
 
+/* --- Gallery Heading --- */
 #gallery-heading {
   font-family: var(--font-heading);
   font-size: 1.6rem;
@@ -138,7 +150,7 @@ main {
   padding-bottom: 0.5rem;
 }
 
-/* --- Temple Gallery Grid (mobile: 1 column) --- */
+/* --- Temple Gallery Grid — mobile: 1 column --- */
 #temple-gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -188,16 +200,6 @@ main {
   color: var(--color-primary);
 }
 
-/* --- Footer --- */
-footer {
-  background-color: var(--color-footer-bg);
-  color: var(--color-footer-text);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
-  line-height: 1.8;
-}
-
 /* --- No results message --- */
 .no-results {
   grid-column: 1 / -1;
@@ -208,20 +210,12 @@ footer {
   font-style: italic;
 }
 
-/* --- Skip to main content (accessibility) --- */
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  z-index: 9999;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border-radius: 0 0 4px 0;
-}
-
-.skip-link:focus {
-  top: 0;
+/* --- Footer --- */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
 }
