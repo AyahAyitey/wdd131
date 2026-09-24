@@ -54,5 +54,18 @@ function populateProductSelect() {
   });
 }
 
-// Run on DOMContentLoaded to ensure the element exists
-document.addEventListener('DOMContentLoaded', populateProductSelect);
+/**
+ * Sets the footer year and last-modified date.
+ */
+function populateFooter() {
+  const yearEl = document.getElementById('current-year');
+  const modEl  = document.getElementById('last-modified');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (modEl)  modEl.textContent  = document.lastModified;
+}
+
+// Run on DOMContentLoaded to ensure all elements exist
+document.addEventListener('DOMContentLoaded', () => {
+  populateProductSelect();
+  populateFooter();
+});
