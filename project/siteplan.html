@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan – StudyNest</title>
+  <link rel="stylesheet" href="siteplan.css">
+</head>
+<body>
 
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo" role="img" aria-label="StudyNest logo">📚</div>
+    <div class="site-title-group">
+      <h1>StudyNest</h1>
+      <p>WDD 131 – Project Site Plan</p>
+    </div>
+  </header>
+
+  <!-- ===== NAV ===== -->
+  <nav aria-label="Site plan sections">
+    <ul>
+      <li><a href="#site-name">Site Name</a></li>
+      <li><a href="#site-purpose">Site Purpose</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#color-scheme">Color Scheme</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- 1. SITE NAME -->
+    <section id="site-name">
+      <h2>1. Site Name</h2>
+      <h3>StudyNest</h3>
+      <p>
+        <strong>StudyNest</strong> is the chosen name for this project website. The word
+        <em>Study</em> immediately signals the site's academic focus, while <em>Nest</em>
+        evokes a comfortable, organized space — a home base for learning. Together, the name
+        communicates a welcoming environment where students can gather resources, track
+        progress, and stay motivated.
+      </p>
+      <p>
+        Optional domain availability: <strong>studynest.info</strong> — short, memorable,
+        and directly tied to the site's purpose.
+      </p>
+    </section>
+
+    <!-- 2. SITE PURPOSE -->
+    <section id="site-purpose">
+      <h2>2. Site Purpose</h2>
+      <p>
+        StudyNest is an online resource hub designed for college and high-school students who
+        want to improve their study habits and academic performance. The site will provide:
+      </p>
+      <ul>
+        <li>Curated study-skill guides (time management, note-taking methods, exam strategies)</li>
+        <li>A subject-resource directory linking to free textbooks, tutorials, and practice tools</li>
+        <li>A motivational quote and tip feed to keep students engaged</li>
+        <li>A simple contact form for visitors to suggest new resources or ask questions</li>
+      </ul>
+      <p>
+        The overall goal is to be a one-stop reference that students return to regularly
+        throughout the semester for both practical help and inspiration.
+      </p>
+    </section>
+
+    <!-- 3. SCENARIOS -->
+    <section id="scenarios">
+      <h2>3. Scenarios</h2>
+      <p>
+        The following scenario questions represent real visitors in the target audience.
+        They guide what content must be present and easy to find on the site.
+      </p>
+
+      <h3>Scenario 1 – The Overwhelmed Freshman</h3>
+      <p>
+        "I just started college and I have four exams in one week. Where can I find a proven
+        study schedule or time-management method that actually works for college-level courses?"
+      </p>
+
+      <h3>Scenario 2 – The Resource Hunter</h3>
+      <p>
+        "I can't afford the required textbook for my Biology class. Does this site list any
+        free or low-cost alternatives, like open-access textbooks or video lecture series,
+        that cover the same material?"
+      </p>
+
+      <h3>Scenario 3 – The Returning Visitor</h3>
+      <p>
+        "I visited StudyNest last week and read a great article on the Pomodoro technique.
+        Is there new content added this week, and is there a way to get notified about
+        new study tips?"
+      </p>
+    </section>
+
+    <!-- 4. COLOR SCHEME -->
+    <section id="color-scheme">
+      <h2>4. Color Scheme</h2>
+      <p>
+        The palette balances professionalism with warmth. Navy anchors the brand with
+        authority and calm, while amber provides energy and draws attention to key calls
+        to action.
+      </p>
+
+      <div class="color-swatches">
+
+        <div class="swatch">
+          <div class="swatch-box" style="background-color:#1a3c5e;" aria-label="Deep Navy Blue"></div>
+          <span><strong>#1a3c5e</strong><br>Deep Navy Blue<br><em>Header, nav background, headings, footer</em></span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-box" style="background-color:#e8a020;" aria-label="Warm Amber"></div>
+          <span><strong>#e8a020</strong><br>Warm Amber<br><em>Accent borders, highlights, hover states, badges</em></span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-box" style="background-color:#f5f7fa; border:1px solid #d0d8e4;" aria-label="Light Gray-Blue"></div>
+          <span><strong>#f5f7fa</strong><br>Light Gray-Blue<br><em>Page background</em></span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-box" style="background-color:#ffffff; border:1px solid #d0d8e4;" aria-label="White"></div>
+          <span><strong>#ffffff</strong><br>White<br><em>Section / card backgrounds</em></span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-box" style="background-color:#2d2d2d;" aria-label="Near-Black"></div>
+          <span><strong>#2d2d2d</strong><br>Near-Black<br><em>Body text, paragraphs</em></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. TYPOGRAPHY -->
+    <section id="typography">
+      <h2>5. Typography</h2>
+      <p>Two Google Fonts are used to create a clear visual hierarchy:</p>
+
+      <h3>Merriweather (Serif) – Headings</h3>
+      <p>
+        Used for all <code>h1</code>–<code>h3</code> elements and the site name in the
+        header. Its classic serif style conveys credibility and academic seriousness.
+      </p>
+      <div class="font-sample">
+        <p class="sample-heading">The Quick Brown Fox Jumps Over the Lazy Dog</p>
+        <p class="sample-heading" style="font-size:1rem; font-weight:400;">
+          Merriweather Regular — Page headings, section titles
+        </p>
+      </div>
+
+      <h3>Open Sans (Sans-Serif) – Body Text</h3>
+      <p>
+        Used for all paragraph text, navigation links, captions, and list items.
+        Its clean, humanist letterforms make long passages easy to read on any screen size.
+      </p>
+      <div class="font-sample">
+        <p class="sample-body">The quick brown fox jumps over the lazy dog.</p>
+        <p class="sample-body" style="font-size:0.9rem; color:#555;">
+          Open Sans Regular — Body copy, navigation, captions, labels
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. WIREFRAMES -->
+    <section id="wireframes">
+      <h2>6. Wireframes</h2>
+      <p>
+        The following wireframe sketches represent the home page layout in mobile
+        (narrow viewport) and desktop (wider viewport) views. Blocks represent
+        structural regions — not final content.
+      </p>
+
+      <div class="wireframes">
+
+        <!-- Mobile Wireframe -->
+        <figure class="wireframe-figure">
+          <div class="wireframe-mobile" role="img" aria-label="Mobile wireframe layout">
+
+            <div class="wf-block wf-header">Header / Logo</div>
+            <div class="wf-block wf-nav">Nav Menu (hamburger)</div>
+            <div class="wf-block wf-hero">Hero Banner<br>Tagline + CTA Button</div>
+
+            <div class="wf-block wf-card" style="height:50px;">Featured Tip Card</div>
+            <div class="wf-block wf-card" style="height:50px;">Subject Directory Card</div>
+            <div class="wf-block wf-card" style="height:50px;">Motivational Quote</div>
+
+            <div class="wf-block wf-footer">Footer</div>
+
+          </div>
+          <figcaption>Mobile View (&lt; 600px)</figcaption>
+        </figure>
+
+        <!-- Desktop Wireframe -->
+        <figure class="wireframe-figure">
+          <div class="wireframe-desktop" role="img" aria-label="Desktop wireframe layout">
+
+            <div class="wf-block wf-header" style="height:40px;">Header – Logo + Site Name</div>
+            <div class="wf-block wf-nav" style="height:26px;">Navigation Bar – Full Links</div>
+            <div class="wf-block wf-hero" style="height:80px;">Hero Section – Banner Image + Headline + CTA</div>
+
+            <div class="wf-card-row">
+              <div class="wf-block wf-card">Study Tips Card</div>
+              <div class="wf-block wf-card">Resources Card</div>
+              <div class="wf-block wf-card">Quote of Day</div>
+            </div>
+
+            <div class="wf-main-row">
+              <div class="wf-block wf-content">Main Content Area<br>(Articles / Guides)</div>
+              <div class="wf-block wf-sidebar">Sidebar<br>(Quick Links)</div>
+            </div>
+
+            <div class="wf-block wf-footer" style="height:32px;">Footer – Copyright + Contact Link</div>
+
+          </div>
+          <figcaption>Desktop View (≥ 900px)</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      &copy; 2026 StudyNest Site Plan &mdash; WDD 131 Project &mdash;
+      <a href="https://validator.w3.org/nu/?doc=" target="_blank" rel="noopener">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">Validate CSS</a>
+    </p>
+  </footer>
+
+</body>
+</html>
