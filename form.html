@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a product review for our featured products. Share your experience and help others make informed decisions.">
+  <meta name="author" content="Student Name">
   <title>Product Review Form | WDD131</title>
-  <meta name="description" content="Submit a product review for our featured products. Share your experience and help others make informed decisions." />
-  <link rel="stylesheet" href="styles/form.css" />
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <header>
@@ -40,19 +41,19 @@
             <span class="sr-only">(required)</span>
           </legend>
           <div class="stars-container">
-            <input type="radio" id="star5" name="rating" value="5" required />
+            <input type="radio" id="star5" name="rating" value="5" required>
             <label for="star5" title="5 stars – Excellent">&#9733;</label>
 
-            <input type="radio" id="star4" name="rating" value="4" />
+            <input type="radio" id="star4" name="rating" value="4" required>
             <label for="star4" title="4 stars – Good">&#9733;</label>
 
-            <input type="radio" id="star3" name="rating" value="3" />
+            <input type="radio" id="star3" name="rating" value="3" required>
             <label for="star3" title="3 stars – Average">&#9733;</label>
 
-            <input type="radio" id="star2" name="rating" value="2" />
+            <input type="radio" id="star2" name="rating" value="2" required>
             <label for="star2" title="2 stars – Poor">&#9733;</label>
 
-            <input type="radio" id="star1" name="rating" value="1" />
+            <input type="radio" id="star1" name="rating" value="1" required>
             <label for="star1" title="1 star – Terrible">&#9733;</label>
           </div>
         </fieldset>
@@ -68,7 +69,7 @@
             name="installdate"
             required
             aria-required="true"
-          />
+          >
         </div>
 
         <!-- Useful Features -->
@@ -76,27 +77,27 @@
           <legend>Useful Features <span class="optional-tag">(select all that apply)</span></legend>
           <div class="checkbox-grid">
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-easy" name="features" value="easy-install" />
+              <input type="checkbox" id="feature-easy" name="features" value="easy-install">
               <label for="feature-easy">Easy Installation</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-reliable" name="features" value="reliable" />
+              <input type="checkbox" id="feature-reliable" name="features" value="reliable">
               <label for="feature-reliable">Reliable Performance</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-value" name="features" value="value" />
+              <input type="checkbox" id="feature-value" name="features" value="value">
               <label for="feature-value">Good Value</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-durable" name="features" value="durable" />
+              <input type="checkbox" id="feature-durable" name="features" value="durable">
               <label for="feature-durable">Durable Build</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-support" name="features" value="support" />
+              <input type="checkbox" id="feature-support" name="features" value="support">
               <label for="feature-support">Great Support</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" id="feature-design" name="features" value="design" />
+              <input type="checkbox" id="feature-design" name="features" value="design">
               <label for="feature-design">Sleek Design</label>
             </div>
           </div>
@@ -122,12 +123,12 @@
             name="username"
             placeholder="e.g. Jane D."
             autocomplete="name"
-          />
+          >
         </div>
 
         <!-- Submit -->
         <div class="form-group submit-group">
-          <input type="submit" value="Submit Review" />
+          <input type="submit" value="Submit Review">
         </div>
 
       </form>
@@ -141,10 +142,6 @@
     </div>
   </footer>
 
-  <script src="scripts/form.js"></script>
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
-  </script>
+  <script src="scripts/form.js" defer></script>
 </body>
 </html>
