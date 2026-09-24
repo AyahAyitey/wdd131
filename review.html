@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Submitted | WDD131</title>
+  <meta name="description" content="Thank you for submitting your product review. Your feedback helps our community." />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Product Review</h1>
+      <p class="tagline">Share your experience with our products</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="confirmation-wrapper">
+      <div class="confirmation-card">
+        <div class="check-icon" aria-hidden="true">&#10003;</div>
+        <h2>Thank You!</h2>
+        <p class="confirm-message">Your review has been submitted successfully.</p>
+
+        <div class="review-summary" id="review-summary">
+          <!-- Populated by review.js -->
+        </div>
+
+        <div class="review-counter">
+          <p>You have completed <strong><span id="review-count">0</span></strong> review<span id="review-plural"></span> on this device.</p>
+        </div>
+
+        <a href="form.html" class="btn-back">&#8592; Write Another Review</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="current-year"></span> WDD131 &mdash; Product Review | <a href="#">Privacy Policy</a></p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/review.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
