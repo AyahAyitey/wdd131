@@ -1,11 +1,6 @@
 /* siteplan.css - WDD131 Project Site Plan Styles */
 
 /* =========================================
-   Google Fonts Import
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
-/* =========================================
    CSS Custom Properties (Color Scheme)
    ========================================= */
 :root {
@@ -174,8 +169,15 @@ section ul li {
   height: 80px;
   border-radius: 8px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Individual swatch colors */
+.swatch-primary    { background-color: #1a3c5e; }
+.swatch-secondary  { background-color: #e8a020; }
+.swatch-bg         { background-color: #f5f7fa; }
+.swatch-surface    { background-color: #ffffff; }
+.swatch-text       { background-color: #2d2d2d; }
 
 .swatch span {
   font-size: 0.78rem;
@@ -201,10 +203,23 @@ section ul li {
   color: var(--color-primary);
 }
 
+.font-sample .sample-heading-small {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
 .font-sample .sample-body {
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--color-text);
+}
+
+.font-sample .sample-body-small {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #555555;
 }
 
 /* =========================================
@@ -264,22 +279,31 @@ section ul li {
   align-items: center;
   justify-content: center;
   font-size: 0.65rem;
-  color: #555;
+  color: #555555;
   text-align: center;
   padding: 3px;
 }
 
-.wf-header    { height: 36px; background-color: #c8d8e8; }
-.wf-nav       { height: 22px; background-color: #d4e2f0; }
-.wf-hero      { height: 70px; background-color: #dde8f4; }
-.wf-card-row  { display: flex; gap: 5px; }
-.wf-card      { flex: 1; height: 55px; background-color: #e4ecf6; }
-.wf-footer    { height: 28px; background-color: #c8d8e8; }
+.wf-header   { height: 36px;  background-color: #c8d8e8; }
+.wf-nav      { height: 22px;  background-color: #d4e2f0; }
+.wf-hero     { height: 70px;  background-color: #dde8f4; }
+.wf-card-row { display: flex; gap: 5px; }
+.wf-card     { flex: 1; height: 55px; background-color: #e4ecf6; }
+.wf-footer   { height: 28px;  background-color: #c8d8e8; }
 
-/* Desktop two-column layout representation */
-.wf-main-row  { display: flex; gap: 5px; }
-.wf-content   { flex: 3; height: 80px; background-color: #dde8f4; }
-.wf-sidebar   { flex: 1; height: 80px; background-color: #e4ecf6; }
+/* Desktop-specific overrides */
+.wf-header-lg { height: 40px; background-color: #c8d8e8; }
+.wf-nav-lg    { height: 26px; background-color: #d4e2f0; }
+.wf-hero-lg   { height: 80px; background-color: #dde8f4; }
+.wf-footer-lg { height: 32px; background-color: #c8d8e8; }
+
+/* Mobile card height overrides */
+.wf-card-md   { flex: 1; height: 50px; background-color: #e4ecf6; }
+
+/* Desktop two-column layout */
+.wf-main-row { display: flex; gap: 5px; }
+.wf-content  { flex: 3; height: 80px; background-color: #dde8f4; }
+.wf-sidebar  { flex: 1; height: 80px; background-color: #e4ecf6; }
 
 /* =========================================
    Footer

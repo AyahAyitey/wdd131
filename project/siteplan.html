@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudyNest site plan for WDD 131 project — outlines the site name, purpose, scenarios, color scheme, typography, and wireframes.">
+  <meta name="author" content="Student Name">
   <title>Site Plan – StudyNest</title>
+
+  <!-- Google Fonts: preconnect first, then stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="siteplan.css">
 </head>
 <body>
@@ -109,28 +117,28 @@
       <div class="color-swatches">
 
         <div class="swatch">
-          <div class="swatch-box" style="background-color:#1a3c5e;" aria-label="Deep Navy Blue"></div>
-          <span><strong>#1a3c5e</strong><br>Deep Navy Blue<br><em>Header, nav background, headings, footer</em></span>
+          <div class="swatch-box swatch-primary"></div>
+          <span><strong>#1a3c5e</strong> Deep Navy Blue — Header, nav, headings, footer</span>
         </div>
 
         <div class="swatch">
-          <div class="swatch-box" style="background-color:#e8a020;" aria-label="Warm Amber"></div>
-          <span><strong>#e8a020</strong><br>Warm Amber<br><em>Accent borders, highlights, hover states, badges</em></span>
+          <div class="swatch-box swatch-secondary"></div>
+          <span><strong>#e8a020</strong> Warm Amber — Accents, borders, hover states</span>
         </div>
 
         <div class="swatch">
-          <div class="swatch-box" style="background-color:#f5f7fa; border:1px solid #d0d8e4;" aria-label="Light Gray-Blue"></div>
-          <span><strong>#f5f7fa</strong><br>Light Gray-Blue<br><em>Page background</em></span>
+          <div class="swatch-box swatch-bg"></div>
+          <span><strong>#f5f7fa</strong> Light Gray-Blue — Page background</span>
         </div>
 
         <div class="swatch">
-          <div class="swatch-box" style="background-color:#ffffff; border:1px solid #d0d8e4;" aria-label="White"></div>
-          <span><strong>#ffffff</strong><br>White<br><em>Section / card backgrounds</em></span>
+          <div class="swatch-box swatch-surface"></div>
+          <span><strong>#ffffff</strong> White — Section card backgrounds</span>
         </div>
 
         <div class="swatch">
-          <div class="swatch-box" style="background-color:#2d2d2d;" aria-label="Near-Black"></div>
-          <span><strong>#2d2d2d</strong><br>Near-Black<br><em>Body text, paragraphs</em></span>
+          <div class="swatch-box swatch-text"></div>
+          <span><strong>#2d2d2d</strong> Near-Black — Body text, paragraphs</span>
         </div>
 
       </div>
@@ -148,9 +156,7 @@
       </p>
       <div class="font-sample">
         <p class="sample-heading">The Quick Brown Fox Jumps Over the Lazy Dog</p>
-        <p class="sample-heading" style="font-size:1rem; font-weight:400;">
-          Merriweather Regular — Page headings, section titles
-        </p>
+        <p class="sample-heading-small">Merriweather Regular — Page headings, section titles</p>
       </div>
 
       <h3>Open Sans (Sans-Serif) – Body Text</h3>
@@ -160,9 +166,7 @@
       </p>
       <div class="font-sample">
         <p class="sample-body">The quick brown fox jumps over the lazy dog.</p>
-        <p class="sample-body" style="font-size:0.9rem; color:#555;">
-          Open Sans Regular — Body copy, navigation, captions, labels
-        </p>
+        <p class="sample-body-small">Open Sans Regular — Body copy, navigation, captions, labels</p>
       </div>
     </section>
 
@@ -179,16 +183,14 @@
 
         <!-- Mobile Wireframe -->
         <figure class="wireframe-figure">
-          <div class="wireframe-mobile" role="img" aria-label="Mobile wireframe layout">
+          <div class="wireframe-mobile">
 
             <div class="wf-block wf-header">Header / Logo</div>
-            <div class="wf-block wf-nav">Nav Menu (hamburger)</div>
-            <div class="wf-block wf-hero">Hero Banner<br>Tagline + CTA Button</div>
-
-            <div class="wf-block wf-card" style="height:50px;">Featured Tip Card</div>
-            <div class="wf-block wf-card" style="height:50px;">Subject Directory Card</div>
-            <div class="wf-block wf-card" style="height:50px;">Motivational Quote</div>
-
+            <div class="wf-block wf-nav">Nav Menu</div>
+            <div class="wf-block wf-hero">Hero Banner / CTA</div>
+            <div class="wf-block wf-card-md">Featured Tip Card</div>
+            <div class="wf-block wf-card-md">Subject Directory Card</div>
+            <div class="wf-block wf-card-md">Motivational Quote</div>
             <div class="wf-block wf-footer">Footer</div>
 
           </div>
@@ -197,11 +199,11 @@
 
         <!-- Desktop Wireframe -->
         <figure class="wireframe-figure">
-          <div class="wireframe-desktop" role="img" aria-label="Desktop wireframe layout">
+          <div class="wireframe-desktop">
 
-            <div class="wf-block wf-header" style="height:40px;">Header – Logo + Site Name</div>
-            <div class="wf-block wf-nav" style="height:26px;">Navigation Bar – Full Links</div>
-            <div class="wf-block wf-hero" style="height:80px;">Hero Section – Banner Image + Headline + CTA</div>
+            <div class="wf-block wf-header-lg">Header – Logo + Site Name</div>
+            <div class="wf-block wf-nav-lg">Navigation Bar – Full Links</div>
+            <div class="wf-block wf-hero-lg">Hero Section – Banner Image + Headline + CTA</div>
 
             <div class="wf-card-row">
               <div class="wf-block wf-card">Study Tips Card</div>
@@ -210,11 +212,11 @@
             </div>
 
             <div class="wf-main-row">
-              <div class="wf-block wf-content">Main Content Area<br>(Articles / Guides)</div>
-              <div class="wf-block wf-sidebar">Sidebar<br>(Quick Links)</div>
+              <div class="wf-block wf-content">Main Content Area (Articles / Guides)</div>
+              <div class="wf-block wf-sidebar">Sidebar (Quick Links)</div>
             </div>
 
-            <div class="wf-block wf-footer" style="height:32px;">Footer – Copyright + Contact Link</div>
+            <div class="wf-block wf-footer-lg">Footer – Copyright + Contact Link</div>
 
           </div>
           <figcaption>Desktop View (≥ 900px)</figcaption>
@@ -229,7 +231,7 @@
   <footer>
     <p>
       &copy; 2026 StudyNest Site Plan &mdash; WDD 131 Project &mdash;
-      <a href="https://validator.w3.org/nu/?doc=" target="_blank" rel="noopener">Validate HTML</a> |
+      <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener">Validate HTML</a> |
       <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">Validate CSS</a>
     </p>
   </footer>
