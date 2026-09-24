@@ -1,0 +1,406 @@
+/* ============================================================
+   WDD131 – Week 05 | Product Review Form
+   Color Palette:
+     Primary:    #1a3a5c  (dark navy)
+     Accent:     #f4a226  (amber)
+     Background: #f5f7fa  (light grey-white)
+     Surface:    #ffffff
+     Text:       #1e2a38  (near-black – passes AA at all sizes)
+     Muted:      #5a6a7a  (passes AA on white ≥ 14px)
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1e2a38;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Accessibility Utility ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #1a3a5c;
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #ccddf0;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+/* ---------- Form Wrapper ---------- */
+.form-wrapper,
+.confirmation-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem 2rem 2.5rem;
+  box-shadow: 0 4px 18px rgba(26, 58, 92, 0.10);
+}
+
+.form-wrapper h2,
+.confirmation-wrapper h2 {
+  font-size: 1.5rem;
+  color: #1a3a5c;
+  margin-bottom: 0.4rem;
+}
+
+.required-note {
+  font-size: 0.875rem;
+  color: #5a6a7a;
+  margin-bottom: 1.5rem;
+}
+
+.required-star {
+  color: #c0392b;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+/* ---------- Form Groups ---------- */
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label,
+.form-group legend {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a3a5c;
+  margin-bottom: 0.4rem;
+}
+
+.optional-tag {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #5a6a7a;
+}
+
+/* ---------- Inputs, Select, Textarea ---------- */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 2px solid #b0bec5;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1e2a38;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: auto;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1a3a5c;
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.18);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ---------- Star Rating (RTL flip trick) ---------- */
+.rating-group {
+  border: none;
+  padding: 0;
+}
+
+.rating-group legend {
+  margin-bottom: 0.5rem;
+}
+
+.stars-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.15rem;
+}
+
+.stars-container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.stars-container label {
+  font-size: 2.2rem;
+  color: #b0bec5;
+  cursor: pointer;
+  transition: color 0.15s;
+  margin-bottom: 0;
+  padding: 0 0.1rem;
+  line-height: 1;
+}
+
+/* Highlight hovered star and all stars to its right (left in DOM = higher value due to RTL) */
+.stars-container label:hover,
+.stars-container label:hover ~ label,
+.stars-container input[type="radio"]:checked ~ label {
+  color: #f4a226;
+}
+
+.stars-container input[type="radio"]:focus-visible + label {
+  outline: 3px solid #1a3a5c;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Checkboxes ---------- */
+.checkbox-group {
+  border: none;
+  padding: 0;
+}
+
+.checkbox-group legend {
+  margin-bottom: 0.6rem;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #1a3a5c;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #1e2a38;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/* ---------- Submit Button ---------- */
+.submit-group {
+  margin-top: 1.8rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: #1a3a5c;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+  background-color: #14304e;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+input[type="submit"]:focus-visible {
+  outline: 3px solid #f4a226;
+  outline-offset: 3px;
+}
+
+/* ---------- Confirmation Page ---------- */
+.confirmation-card {
+  text-align: center;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #1a3a5c;
+  color: #ffffff;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.confirm-message {
+  font-size: 1.1rem;
+  color: #5a6a7a;
+  margin-bottom: 1.5rem;
+}
+
+.review-summary {
+  background-color: #f5f7fa;
+  border-left: 4px solid #f4a226;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  margin-bottom: 1.4rem;
+  font-size: 0.95rem;
+}
+
+.review-summary p {
+  margin-bottom: 0.35rem;
+}
+
+.review-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.review-summary strong {
+  color: #1a3a5c;
+}
+
+.review-counter {
+  background-color: #eaf1f8;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.95rem;
+  color: #1e2a38;
+}
+
+.review-counter strong {
+  font-size: 1.3rem;
+  color: #1a3a5c;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background-color: #f4a226;
+  color: #1e2a38;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #d98f1e;
+}
+
+.btn-back:focus-visible {
+  outline: 3px solid #1a3a5c;
+  outline-offset: 3px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #1a3a5c;
+  color: #ccddf0;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.875rem;
+  margin-top: auto;
+}
+
+footer .footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+footer p + p {
+  margin-top: 0.3rem;
+}
+
+footer a {
+  color: #f4a226;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffc55a;
+}
+
+/* ---------- Responsive – Tablet / Desktop ---------- */
+@media (min-width: 600px) {
+  .form-wrapper,
+  .confirmation-wrapper {
+    padding: 2.5rem 3rem 3rem;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 3rem 1rem;
+  }
+}
