@@ -7,6 +7,7 @@
   <meta name="author" content="Student Name">
   <title>Product Review Form | WDD131</title>
   <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header>
@@ -21,7 +22,7 @@
       <h2>Write a Review</h2>
       <p class="required-note">Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.</p>
 
-      <form method="get" action="review.html" novalidate>
+      <form method="get" action="review.html">
 
         <!-- Product Name -->
         <div class="form-group">
@@ -121,7 +122,7 @@
             type="text"
             id="username"
             name="username"
-            placeholder="e.g. Ayah A."
+            placeholder="e.g. Jane D."
             autocomplete="name"
           >
         </div>
@@ -141,7 +142,5 @@
       <p>Last Modified: <span id="last-modified"></span></p>
     </div>
   </footer>
-
-  <script src="scripts/form.js"></script>
 </body>
 </html>
