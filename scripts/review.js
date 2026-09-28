@@ -93,8 +93,16 @@ function renderCounter(count) {
   if (pluralEl) pluralEl.textContent = count === 1 ? '' : 's';
 }
 
+function populateFooter() {
+  const yearEl = document.getElementById('current-year');
+  const modEl = document.getElementById('last-modified');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (modEl) modEl.textContent = document.lastModified;
+}
+
 // Entry point
 document.addEventListener('DOMContentLoaded', () => {
+  populateFooter();
   const count = incrementReviewCount();
   renderCounter(count);
   renderSummary();
