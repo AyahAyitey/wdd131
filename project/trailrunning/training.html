@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build trail fitness gradually with beginner-friendly advice for easy mileage, hills, recovery, and a personal weekly running plan.">
+  <meta name="theme-color" content="#163b32">
+  <title>Training | Trailrunning.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><a class="wordmark" href="index.html" aria-label="Trailrunning.com home"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button><nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Explore</a><a href="trails.html">Trail finder</a><a href="gear.html">Gear guide</a><a href="training.html" aria-current="page">Training</a></nav></header>
+  <main id="main">
+    <section class="page-hero page-hero-training"><div class="page-hero-inner"><p class="eyebrow">Strong is a practice</p><h1>Go steady.<br>Go farther.</h1><p>Trail fitness grows one patient outing at a time. Keep the effort conversational, make room for recovery, and let consistency do its work.</p></div></section>
+    <section class="training-layout page-width" aria-labelledby="training-title">
+      <div class="training-main"><p class="eyebrow eyebrow-dark">A few things that help</p><h2 id="training-title">Build for the trail you have.</h2>
+        <article class="training-tip"><span>01</span><div><h3>Start with easy time on feet</h3><p>Begin with a duration you can finish feeling in control. Run, hike, or alternate both. Increase gradually and keep most outings comfortable enough to speak in full sentences.</p></div></article>
+        <article class="training-tip"><span>02</span><div><h3>Let hills teach patience</h3><p>Shorten your stride on climbs and hike steep sections when that is the smarter choice. Practice downhill control on gentle terrain before adding speed or technical trails.</p></div></article>
+        <article class="training-tip"><span>03</span><div><h3>Recover like it is part of training</h3><p>Rest days, sleep, food, and easy movement all support adaptation. If pain changes your stride or keeps getting worse, stop and seek qualified medical advice.</p></div></article>
+        <article class="training-tip"><span>04</span><div><h3>Choose repeatable over heroic</h3><p>A modest weekly rhythm beats a single all-out weekend. Leave enough space between harder sessions to feel ready for the next one.</p></div></article>
+      </div>
+      <aside class="planner-panel" aria-labelledby="planner-title"><p class="eyebrow">Make it yours</p><h2 id="planner-title">Your weekly starting point.</h2><p class="planner-intro">Choose a comfortable goal. Your plan stays on this device.</p>
+        <form id="planner-form" class="planner-form">
+          <label for="experience">Where are you starting?</label><select id="experience" name="experience" required><option value="">Choose one</option><option value="new">New to running</option><option value="returning">Returning after a break</option><option value="regular">Running regularly</option></select>
+          <label for="weekly-minutes">Comfortable minutes this week</label><input id="weekly-minutes" name="weeklyMinutes" type="number" min="10" max="600" step="5" placeholder="e.g. 60" required>
+          <button class="button button-bright" type="submit">Save my starting point</button>
+        </form>
+        <p class="planner-result" id="planner-result" aria-live="polite"></p>
+        <button class="text-button" id="clear-plan" type="button" hidden>Clear saved plan</button>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a><p>Developer: Ayah Ayitey BYU Software Engineering student</p><a href="references.html">References</a><small>WDD 131 project</small></footer>
+</body>
+</html>

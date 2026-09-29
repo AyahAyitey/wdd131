@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a sample trail directory with distance, elevation gain, difficulty, and location. Filter routes to find a good fit for your day.">
+  <meta name="theme-color" content="#163b32">
+  <title>Trail Finder | Trailrunning.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Trailrunning.com home"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Explore</a><a href="trails.html" aria-current="page">Trail finder</a><a href="gear.html">Gear guide</a><a href="training.html">Training</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-hero page-hero-trails">
+      <div class="page-hero-inner"><p class="eyebrow">Pick your kind of climb</p><h1>Out there<br>is closer<br>than you think.</h1><p>Four well-known routes to get your search started. Filter by effort, then verify current conditions before heading out.</p></div>
+    </section>
+    <section class="trail-finder page-width" aria-labelledby="routes-title">
+      <div class="section-heading trail-heading"><div><p class="eyebrow eyebrow-dark">Route notes</p><h2 id="routes-title">Find your next trail.</h2></div><p>Route details are starting points, not live conditions. Check local land managers for current closures, permits, and safety notices.</p></div>
+      <form class="filter-bar" id="route-filters" aria-label="Filter trails">
+        <label>Difficulty<select id="difficulty-filter" name="difficulty"><option value="all">All levels</option><option value="Easy">Easy</option><option value="Moderate">Moderate</option><option value="Hard">Hard</option><option value="Very strenuous">Very strenuous</option></select></label>
+        <label>Maximum distance<select id="distance-filter" name="distance"><option value="all">Any distance</option><option value="5">Up to 5 miles</option><option value="8">Up to 8 miles</option></select></label>
+        <label>Sort by<select id="sort-filter" name="sort"><option value="distance">Distance</option><option value="elevation">Elevation gain</option><option value="name">Trail name</option></select></label>
+        <button class="button button-dark filter-reset" type="reset">Clear filters</button>
+      </form>
+      <p class="results-count" id="results-count" aria-live="polite"></p>
+      <div class="route-grid" id="route-list"></div>
+      <p class="safety-note"><strong>Before you go:</strong> Tell someone your plan, carry water and a charged phone, and turn around when conditions or your body say it is time.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a><p>Developer: Ayah Ayitey BYU Software Engineering student</p><a href="references.html">References</a><small>WDD 131 project</small></footer>
+</body>
+</html>

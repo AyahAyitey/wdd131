@@ -1,1 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your footing on the trail. Explore beginner-friendly routes, practical gear advice, and thoughtful training guidance for trail runners.">
+  <meta name="theme-color" content="#163b32">
+  <title>Trailrunning.com | Find your footing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header home-header">
+    <a class="wordmark" href="index.html" aria-label="Trailrunning.com home"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a>
+  </header>
+  <div class="home-nav-shell">
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">Menu <span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Explore</a>
+      <a href="trails.html">Trail finder</a>
+      <a href="gear.html">Gear guide</a>
+      <a href="training.html">Training</a>
+    </nav>
+  </div>
+  <main id="main">
+    <section class="hero hero-home">
+      <div class="hero-content">
+        <p class="eyebrow">A little dirt changes everything</p>
+        <h1>Find your<br>footing.</h1>
+        <p class="hero-copy">Good trails, good sense, and a reason to head outside. Start wherever you are.</p>
+        <a class="button button-bright" href="trails.html">Find a trail <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="hero-caption">Move with the terrain. Leave it better.</p>
+    </section>
 
+    <section class="home-card-row page-width" aria-label="Featured trail running guides">
+      <article class="home-card home-tip-card">
+        <img class="home-card-image" src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&amp;w=700&amp;q=78" alt="Runner moving along a wooded trail" loading="lazy" width="700" height="390">
+        <div class="home-card-copy"><p class="eyebrow eyebrow-dark">Featured tip</p><h2>Let the trail set the pace.</h2><p>Shorten your stride on climbs, hike when it helps, and keep your first outings comfortably easy.</p><a class="text-link" href="training.html">More training tips <span aria-hidden="true">→</span></a></div>
+      </article>
+      <section class="home-card home-directory-card" aria-labelledby="directory-title">
+        <p class="eyebrow eyebrow-dark">Trail guide</p><h2 id="directory-title">Explore by subject.</h2>
+        <ul class="home-directory-links"><li><a href="trails.html">Trail routes <span aria-hidden="true">↗</span></a></li><li><a href="gear.html">Gear guide <span aria-hidden="true">↗</span></a></li><li><a href="training.html">Training tips <span aria-hidden="true">↗</span></a></li></ul>
+      </section>
+      <article class="home-card home-quote-card">
+        <p class="eyebrow">Quote of the day</p><blockquote>The best trail is the one that gets you out the door.</blockquote><p class="quote-credit">A trail-running reminder</p>
+      </article>
+    </section>
+
+    <section class="home-main-layout page-width" aria-label="Trail running articles and quick links">
+      <div class="home-main-content">
+        <p class="eyebrow eyebrow-dark">Field notes</p><h2>Make room for the good miles.</h2>
+        <article class="home-article"><p class="article-label">Start here</p><h3>Choose a route that fits today</h3><p>Distance is only part of the effort. Elevation, surface, weather, and how far you are from help all matter. Start with a route you can shorten or turn around on.</p><a class="text-link" href="trails.html">Open the trail finder <span aria-hidden="true">→</span></a></article>
+        <article class="home-article"><p class="article-label">Pack well</p><h3>Carry what your outing calls for</h3><p>Water, a familiar snack, weather-ready layers, and a way to navigate are useful starting points. Adjust your kit to the distance and current trail conditions.</p><a class="text-link" href="gear.html">Read the gear guide <span aria-hidden="true">→</span></a></article>
+      </div>
+      <aside class="home-sidebar" aria-labelledby="quick-links-title"><p class="eyebrow eyebrow-dark">Keep exploring</p><h2 id="quick-links-title">Quick links</h2><ul class="quick-link-list"><li><a href="trails.html">Browse routes</a></li><li><a href="gear.html">Check your kit</a></li><li><a href="training.html">Build a routine</a></li><li><a href="references.html">Sources and credits</a></li></ul></aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-mark" aria-hidden="true">T</span>trailrunning<span class="wordmark-dot">.com</span></a>
+    <p>Developer: Ayah Ayitey BYU Software Engineering student</p>
+    <a href="references.html">References</a>
+    <small>WDD 131 project</small>
+  </footer>
+</body>
+</html>
